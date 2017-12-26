@@ -1,0 +1,43 @@
+{
+  "name": "browser-sync",
+  "version": "1.0.0",
+  "description": "Fréttayfirlit",
+  "main": "index.js",
+  "scripts": {
+    "eslint": "eslint js/*.js",
+    "stylelint": "stylelint *.scss scss/*.scss --syntax scss",
+    "lint": "stylelint *.scss scss/*.scss --syntax scss",
+    "babel": "babel js/*.js --watch --out-file script-compiled.js --source-maps",
+    "browser-sync": "browser-sync start --server --files index.html styles.css script-compiled.js",
+    "sass": "node-sass styles.scss styles.css -w",
+    "dev": "npm-run-all --parallel sass babel browser-sync"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sakkattack/frettayfirlit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sakkattack/frettayfirlit/issues"
+  },
+  "homepage": "https://github.com/sakkattack/frettayfirlit#readme",
+  "dependencies": {
+    "browser-sync": "^2.18.13",
+    "node-sass": "^4.7.1",
+    "npm-run-all": "^4.1.1",
+    "stylelint": "^8.1.1",
+    "stylelint-config-primer": "^2.1.0",
+    "babel-cli": "6.26.0",
+    "babel-eslint": "8.0.1",
+    "babel-preset-env": "1.6.1",
+    "eslint": "4.9.0",
+    "eslint-config-airbnb-base": "12.1.0",
+    "eslint-plugin-import": "2.8.0",
+    "cheerio": "1.0.0-rc.2",
+    "request": "2.83.0"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.2"
+  }
+}
